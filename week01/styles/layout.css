@@ -1,0 +1,65 @@
+/* styles/layout.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "left main right"
+    "footer footer footer";
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+/* Header + Nav */
+header {
+  grid-area: header;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex; /* Flexbox */
+  justify-content: center;
+  gap: 14rem;
+  background-color: black;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sidebars */
+.left-sidebar {
+  grid-area: left;
+  background-color: #ddd;
+  padding: 1rem;
+}
+
+.right-sidebar {
+  grid-area: right;
+  background-color: #f89292;
+  padding: 1rem;
+}
+
+/* Main */
+main {
+  grid-area: main;
+  background-color: #ccc;
+  padding: 1rem;
+}
+
+/* Footer */
+footer {
+  grid-area: footer;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
