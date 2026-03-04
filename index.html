@@ -1,92 +1,92 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Cardeal Felisberto</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 - Dynamic Web Fundamentals - Cardeal Felisberto</title>
 
-    <link rel="stylesheet" href="styles/base.css">
+  <!-- Meta tags exigidos -->
+  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals portfolio site by Cardeal Felisberto, showcasing projects and background.">
+  <meta name="author" content="Cardeal Felisberto">
 
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <!-- Google Fonts com preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto&display=swap" rel="stylesheet">
 
-    <script src="scripts/getdates.js" defer></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/base.css">
 
+  <!-- JS externo com defer -->
+  <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-
-    <header class="top-header">
+  <header class="top-header">
     <h1>WDD 131 - Dynamic Web Fundamentals</h1>
-</header>
-
-<nav class="main-nav">
-    <ul>
+    <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+    <nav class="main-nav">
+      <ul>
         <li><a href="https://www.linkedin.com/in/cardeal-felisberto-a5283b244" target="_blank">LinkedIn</a></li>
         <li><a href="https://byupw.instructure.com/" target="_blank">I-Learn</a></li>
         <li><a href="https://www.biblegateway.com/passage/?search=John+3%3A16&version=KJV" target="_blank">Scripture</a></li>
         <li><a href="final-project/">Final Project</a></li>
-    </ul>
-</nav>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <h1>Cardeal Felisberto</h1>
+  <main>
+    <h1>Cardeal Felisberto</h1>
 
-        <div class="cards">
-
-            <!-- About Me Card -->
-            <section class="card">
-                <div class="card-header">
-                    <h2>About Me</h2>
-                </div>
-
-                <div class="card-body">
-                    <div class="row">
-                        <div>
-                            <p>
-                                My name is Cardeal Felisberto. I am from Maputo, Mozambique, and I am currently studying Software Development at BYU-Idaho. I enjoy learning new technologies and building creative projects. I am motivated by the idea of using technology to solve real-world problems and to make everyday tasks easier. I also value collaboration and believe that sharing knowledge helps everyone grow stronger together.
-                            </p>
-
-                        </div>
-                        <img src="images/cardeal.png" alt="Cardeal Felisberto">
-                    </div>
-
-                    <h3>Mozambique</h3>
-
-                    <div class="row">
-                        <div>
-                            <p>
-                                Mozambique is located in southeastern Africa, along the Indian Ocean. It is known for its rich culture, diverse wildlife, and beautiful coastline. Maputo is the capital city.
-                            </p>
-                        </div>
-                        <img src="images/mozambique_represented01.jpg" alt="Flag of Mozambique">
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects Card -->
-            <section class="card">
-                <div class="card-header">
-                    <h2>My Projects</h2>
-                </div>
-
-                <div class="card-body">
-                    <ul>
-                        <li><a href="#">InovaDesign</a></li>
-                        <li><a href="#">Receitas Fácil</a></li>
-                        <li><a href="#">Inova Palavra</a></li>
-                        <li><a href="#">Eletroservices</a></li>
-                        <li><a href="#">Silva's tech</a></li>
-                    </ul>
-                </div>
-            </section>
-
+    <div class="cards">
+      <!-- About Me Card -->
+      <section class="card">
+        <div class="card-header">
+          <h2>About Me</h2>
         </div>
-    </main>
+        <div class="card-body">
+          <div class="row">
+            <div>
+              <p>
+                My name is Cardeal Felisberto. I am from Maputo, Mozambique, and I am currently studying Software Development at BYU-Idaho. I enjoy learning new technologies and building creative projects. I am motivated by the idea of using technology to solve real-world problems and to make everyday tasks easier. I also value collaboration and believe that sharing knowledge helps everyone grow stronger together.
+              </p>
+            </div>
+            <img src="images/cardeal.png" alt="Cardeal Felisberto">
+          </div>
 
-    <footer>
-        <p>&copy; <span id="currentyear"></span> Cardeal Felisberto - Mozambique</p>
-        <p id="lastModified" class="last-modified"></p>
-    </footer>
+          <h3>Mozambique</h3>
+          <div class="row reverse">
+            <img src="images/mozambique_flag.png" alt="Flag of Mozambique">
+            <div>
+              <p>
+                Mozambique is located in southeastern Africa, along the Indian Ocean. It is known for its rich culture, diverse wildlife, and beautiful coastline. Maputo is the capital city.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- Projects Card -->
+      <section class="card">
+        <div class="card-header">
+          <h2>My Projects</h2>
+        </div>
+        <div class="card-body">
+          <ul>
+            <li><a href="#">InovaDesign</a></li>
+            <li><a href="#">Receitas Fácil</a></li>
+            <li><a href="#">Inova Palavra</a></li>
+            <li><a href="#">Eletroservices</a></li>
+            <li><a href="#">Silva's tech</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Cardeal Felisberto - Mozambique</p>
+    <p id="lastModified" class="last-modified"></p>
+  </footer>
 </body>
 </html>
