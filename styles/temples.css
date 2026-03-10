@@ -1,6 +1,3 @@
-/* Importando a fonte Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 /* BASE */
 body {
   font-family: 'Roboto', sans-serif;
@@ -106,4 +103,10 @@ footer {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+}
+
+.album img {
+  aspect-ratio: 4 / 3;  /* define proporção fixa */
+  width: 100%;
+  height: auto;
 }
