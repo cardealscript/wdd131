@@ -6,17 +6,29 @@
 
     <title>Temple Album</title>
 
+    <!-- Meta tags exigidos pelo audit -->
+    <meta name="description" content="Temple Album showcasing images of temples with captions.">
+    <meta name="author" content="Cardeal Felisberto">
+
+    <!-- Google Fonts com preconnect (substitui o @import do CSS) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
 
+    <!-- JS -->
     <script src="scripts/temples.js" defer></script>
   </head>
 
   <body>
     <header>
-      <h1>Temple Album</h1>
-      <button id="menu">☰</button>
-      <nav>
+      <!-- Corrigido: apenas um <h1> no documento, este virou <h2> -->
+      <h2>Temple Album</h2>
+      <button id="menu" aria-controls="nav" aria-expanded="false">☰</button>
+      <nav id="nav">
         <a href="#">Home</a>
         <a href="#">Old</a>
         <a href="#">New</a>
@@ -26,43 +38,44 @@
     </header>
 
     <main>
+      <!-- Mantido o único <h1> dentro do main -->
       <h1>My Temple Album</h1>
       <section class="album">
         <figure>
-          <img src="images/temple1.jpg" alt="Temple 1" width="400" height="250" loading="lazy">
-          <figcaption>Temple 1</figcaption>
+          <img src="images/temple1.jpg" alt="Salt Lake Temple, Utah" width="400" height="250" loading="lazy">
+          <figcaption>Salt Lake Temple</figcaption>
         </figure>
         <figure>
-          <img src="images/temple1.jpg" alt="Temple 2" width="400" height="250" loading="lazy">
-          <figcaption>Temple 2</figcaption>
+          <img src="images/temple2.jpg" alt="Mesa Arizona Temple" width="400" height="250" loading="lazy">
+          <figcaption>Mesa Arizona Temple</figcaption>
         </figure>
         <figure>
-          <img src="images/temple1.jpg" alt="Temple 3" width="400" height="250" loading="lazy">
-          <figcaption>Temple 3</figcaption>
+          <img src="images/temple3.jpg" alt="Nauvoo Illinois Temple" width="400" height="250" loading="lazy">
+          <figcaption>Nauvoo Illinois Temple</figcaption>
         </figure>
         <figure>
-          <img src="images/temple1.jpg" alt="Temple 4" width="400" height="250" loading="lazy">
-          <figcaption>Temple 4</figcaption>
+          <img src="images/temple4.jpg" alt="Provo Utah Temple" width="400" height="250" loading="lazy">
+          <figcaption>Provo Utah Temple</figcaption>
         </figure>
         <figure>
-          <img src="images/temple1.jpg" alt="Temple 5" width="400" height="250" loading="lazy">
-          <figcaption>Temple 5</figcaption>
+          <img src="images/temple5.jpg" alt="Ogden Utah Temple" width="400" height="250" loading="lazy">
+          <figcaption>Ogden Utah Temple</figcaption>
         </figure>
         <figure>
-          <img src="images/temple1.jpg" alt="Temple 6" width="400" height="250" loading="lazy">
-          <figcaption>Temple 6</figcaption>
+          <img src="images/temple6.jpg" alt="Los Angeles California Temple" width="400" height="250" loading="lazy">
+          <figcaption>Los Angeles California Temple</figcaption>
         </figure>
         <figure>
-          <img src="images/temple1.jpg" alt="Temple 7" width="400" height="250" loading="lazy">
-          <figcaption>Temple 7</figcaption>
+          <img src="images/temple7.jpg" alt="Washington D.C. Temple" width="400" height="250" loading="lazy">
+          <figcaption>Washington D.C. Temple</figcaption>
         </figure>
         <figure>
-          <img src="images/temple1.jpg" alt="Temple 8" width="400" height="250" loading="lazy">
-          <figcaption>Temple 8</figcaption>
+          <img src="images/temple8.jpg" alt="São Paulo Brazil Temple" width="400" height="250" loading="lazy">
+          <figcaption>São Paulo Brazil Temple</figcaption>
         </figure>
         <figure>
-          <img src="images/temple1.jpg" alt="Temple 9" width="400" height="250" loading="lazy">
-          <figcaption>Temple 9</figcaption>
+          <img src="images/temple9.jpg" alt="Johannesburg South Africa Temple" width="400" height="250" loading="lazy">
+          <figcaption>Johannesburg South Africa Temple</figcaption>
         </figure>
       </section>
     </main>
