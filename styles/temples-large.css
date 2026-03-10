@@ -1,0 +1,32 @@
+@media (min-width: 768px) {
+
+  /* NAV HORIZONTAL */
+  nav {
+    display: flex;
+    flex-direction: row;
+    background: none;
+  }
+
+  nav a {
+    border: none;
+    padding: .8rem 1.5rem;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  /* GRID */
+  .album {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  /* CARD EFFECT */
+  figure {
+    transition: transform .25s;
+  }
+
+  figure:hover {
+    transform: scale(1.03);
+  }
+}
