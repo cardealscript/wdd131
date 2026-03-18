@@ -3,8 +3,9 @@
   --primary-color: #830616;
   --accent-color: #005786;
   --bg-color: #f0f7f0;
-  --text-color: #333;
+  --text-color: #333333;
   --white: #ffffff;
+  --white-transparent: rgba(255, 255, 255, 0.85);
   --font: 'Georgia', serif;
 }
 
@@ -131,7 +132,7 @@ footer {
     top: 50%;
     transform: translateY(-50%);
     width: 220px;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: var(--white-transparent);
     color: var(--text-color);
     border-radius: 8px;
     padding: 0;
