@@ -1,0 +1,51 @@
+body {
+  font-family: Roboto, helvetica, sans-serif;
+}
+
+header,
+main,
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Banner substitui o marquee */
+.banner {
+  padding: 1rem;
+  background-color: #eee;
+}
+
+h1 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;  /* artigo maior, lista menor */
+  gap: 2rem;
+}
+
+/* h2 e callout ocupam as 2 colunas */
+h2 {
+  color: navy;
+  text-align: left;
+  grid-column: 1 / -1;
+}
+
+.callout {
+  color: #ffffff;        /* contraste corrigido: branco sobre roxo */
+  background-color: #702963;
+  padding: 1rem;
+  grid-column: 1 / -1;
+}
+
+article p {
+  text-align: justify;
+}
+
+footer {
+  margin-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: smaller;
+  text-align: left;     /* footer alinhado à esquerda */
+}
