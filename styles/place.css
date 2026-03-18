@@ -1,0 +1,176 @@
+/* CSS Variables */
+:root {
+  --primary-color: #830616;
+  --accent-color: #005786;
+  --bg-color: #f0f7f0;
+  --text-color: #333;
+  --white: #ffffff;
+  --font: 'Georgia', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Header */
+header {
+  background-color: var(--accent-color);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 6px solid var(--primary-color);
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+/* Hero */
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Main mobile */
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* Data and Weather - mobile */
+.data, .weather {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.data h2, .weather h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+/* Weather icon mobile */
+.weather-icon-mobile {
+  display: block;
+  width: 80px;
+  margin: 0 auto 1rem auto;
+}
+
+/* Pseudo-element - wider view only */
+.weather h2::after {
+  content: '';
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: right;
+  padding: 0.3rem 1rem 0.3rem 0;
+  font-weight: bold;
+  width: 50%;
+}
+
+td {
+  text-align: left;
+  padding: 0.3rem 0;
+}
+
+/* Footer */
+footer {
+  background-color: var(--accent-color);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 0rem;
+  font-size: 0.9rem;
+}
+
+/* ---- WIDER VIEW ---- */
+@media (min-width: 768px) {
+
+  main {
+    padding: 0;
+    gap: 0;
+    position: relative;
+  }
+
+  .hero {
+    position: relative;
+    width: 100%;
+  }
+
+  .hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Cards sobre a imagem */
+  .data, .weather {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 220px;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: var(--text-color);
+    border-radius: 8px;
+    padding: 0;
+  }
+
+  .data {
+    left: 1rem;
+  }
+
+  .weather {
+    right: 1rem;
+  }
+
+  .data h2, .weather h2 {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  table {
+    padding: 0.5rem;
+  }
+
+  th, td {
+    font-size: 0.8rem;
+    color: var(--text-color);
+  }
+
+  /* Emoji no Weather wider view */
+  .weather h2::after {
+    content: '⛅';
+    margin-left: 0.5rem;
+  }
+
+  /* Esconde SVG no wider view */
+  .weather-icon-mobile {
+    display: none;
+  }
+}
