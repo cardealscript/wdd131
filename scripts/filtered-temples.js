@@ -71,21 +71,21 @@ const temples = [
     location: "Aba, Nigeria",
     dedicated: "2005, August, 7",
     area: 11500,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+    imageUrl: "images/temple1.1.jpg"
   },
   {
     templeName: "Lima Peru Temple",
     location: "Lima, Peru",
     dedicated: "1986, January, 10",
     area: 9600,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+    imageUrl: "images/temple1.2.jpg"
   },
   {
     templeName: "Yigo Guam Temple",
     location: "Yigo, Guam",
     dedicated: "2020, May, 2",
     area: 6861,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+    imageUrl: "images/temple1.3.jpg"
   }
 ];
 
