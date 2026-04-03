@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit a product review for our tech products. Share your experience, rate the product, and help others make informed decisions." />
+  <title>Product Review | WDD131</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <p class="site-label">WDD131 &mdash; Web Frontend Development</p>
+      <h1>Product Review</h1>
+      <p class="header-sub">Tell us about your experience with one of our products</p>
+    </div>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#" aria-current="page">Review</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="form-card">
+      <h2>Submit Your Review</h2>
+      <p class="form-intro">Fields marked with <span class="req-mark" aria-hidden="true">*</span> <span class="sr-only">an asterisk</span> are required.</p>
+
+      <form method="get" action="review.html" id="reviewForm" novalidate>
+
+        <!-- 1. Product Name -->
+        <div class="field-group">
+          <label for="productName">
+            Product Name <span class="req-mark" aria-label="required">*</span>
+          </label>
+          <div class="select-wrap">
+            <select id="productName" name="productName" required aria-required="true">
+              <option value="" disabled selected>Select a Product ...</option>
+            </select>
+            <span class="select-icon" aria-hidden="true">&#9660;</span>
+          </div>
+        </div>
+
+        <!-- 2. Overall Rating -->
+        <div class="field-group">
+          <fieldset>
+            <legend>
+              Overall Rating <span class="req-mark" aria-label="required">*</span>
+            </legend>
+            <p class="field-hint">Select a star rating from 1 (lowest) to 5 (highest)</p>
+            <div class="stars-wrap" role="group" aria-label="Star rating">
+              <input type="radio" id="star5" name="rating" value="5" required aria-required="true">
+              <label for="star5" title="5 stars - Excellent">&#9733;<span class="sr-only">5 stars</span></label>
+
+              <input type="radio" id="star4" name="rating" value="4">
+              <label for="star4" title="4 stars - Good">&#9733;<span class="sr-only">4 stars</span></label>
+
+              <input type="radio" id="star3" name="rating" value="3">
+              <label for="star3" title="3 stars - Average">&#9733;<span class="sr-only">3 stars</span></label>
+
+              <input type="radio" id="star2" name="rating" value="2">
+              <label for="star2" title="2 stars - Poor">&#9733;<span class="sr-only">2 stars</span></label>
+
+              <input type="radio" id="star1" name="rating" value="1">
+              <label for="star1" title="1 star - Terrible">&#9733;<span class="sr-only">1 star</span></label>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- 3. Date of Installation -->
+        <div class="field-group">
+          <label for="installDate">
+            Date of Installation <span class="req-mark" aria-label="required">*</span>
+          </label>
+          <input
+            type="date"
+            id="installDate"
+            name="installDate"
+            required
+            aria-required="true"
+            aria-describedby="installDate-hint"
+          />
+          <p class="field-hint" id="installDate-hint">When did you install or receive this product?</p>
+        </div>
+
+        <!-- 4. Useful Features -->
+        <div class="field-group">
+          <fieldset>
+            <legend>Useful Features <span class="optional-tag">(Check all that apply)</span></legend>
+            <div class="checkbox-grid">
+              <label class="check-item">
+                <input type="checkbox" id="durability" name="features" value="Durability">
+                <span class="check-box" aria-hidden="true"></span>
+                Durability
+              </label>
+              <label class="check-item">
+                <input type="checkbox" id="easeOfUse" name="features" value="Ease of Use">
+                <span class="check-box" aria-hidden="true"></span>
+                Ease of Use
+              </label>
+              <label class="check-item">
+                <input type="checkbox" id="performance" name="features" value="Performance">
+                <span class="check-box" aria-hidden="true"></span>
+                Performance
+              </label>
+              <label class="check-item">
+                <input type="checkbox" id="design" name="features" value="Design">
+                <span class="check-box" aria-hidden="true"></span>
+                Design
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- 5. Written Review -->
+        <div class="field-group">
+          <label for="writtenReview">
+            Written Review <span class="optional-tag">(Optional)</span>
+          </label>
+          <textarea
+            id="writtenReview"
+            name="writtenReview"
+            rows="5"
+            placeholder="Describe your experience with the product..."
+            aria-describedby="review-hint"
+          ></textarea>
+          <p class="field-hint" id="review-hint">Share details about what you liked or disliked.</p>
+        </div>
+
+        <!-- 6. User Name -->
+        <div class="field-group">
+          <label for="userName">
+            Your Name <span class="optional-tag">(Optional)</span>
+          </label>
+          <input
+            type="text"
+            id="userName"
+            name="userName"
+            placeholder="e.g. Zacarias Conwana"
+            autocomplete="name"
+          />
+        </div>
+
+        <!-- Submit -->
+        <div class="field-group submit-group">
+          <input type="submit" value="Post Review" class="btn-submit">
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="currentYear"></span>
+      &bull; WDD131 Product Review
+      &bull; Last Modified: <span id="lastMod"></span>
+    </p>
+  </footer>
+
+  <script src="scripts/form.js"></script>
+  <script>
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+    document.getElementById("lastMod").textContent = document.lastModified;
+  </script>
+</body>
+</html>

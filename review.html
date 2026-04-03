@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your product review has been successfully submitted. Thank you for your feedback." />
+  <title>Review Confirmed | WDD131</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/form.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <p class="site-label">WDD131 &mdash; Web Frontend Development</p>
+      <h1>Product Review</h1>
+      <p class="header-sub">Tell us about your experience with one of our products</p>
+    </div>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="form.html" aria-current="page">Review</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="form-card confirmation">
+
+      <div class="confirm-check" aria-hidden="true">&#10003;</div>
+      <h2>Thank You!</h2>
+      <p class="confirm-msg">Your review has been successfully submitted.</p>
+
+      <!-- Review Summary -->
+      <section class="summary-section" aria-label="Review summary">
+        <h3>Your Submission</h3>
+        <dl class="summary-list" id="summaryList">
+          <!-- Populated by JS -->
+        </dl>
+      </section>
+
+      <!-- Review Counter -->
+      <div class="counter-card" aria-live="polite">
+        <p class="counter-label">Total Reviews Submitted</p>
+        <p class="counter-num" id="reviewCount" aria-label="Review count">0</p>
+      </div>
+
+      <a href="form.html" class="btn-back">&#8592; Submit Another Review</a>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="currentYear"></span>
+      &bull; WDD131 Product Review
+      &bull; Last Modified: <span id="lastMod"></span>
+    </p>
+  </footer>
+
+  <script src="scripts/form.js"></script>
+  <script>
+    // Footer
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+    document.getElementById("lastMod").textContent = document.lastModified;
+
+    // --- localStorage counter ---
+    let count = parseInt(localStorage.getItem("reviewCount") || "0");
+    count++;
+    localStorage.setItem("reviewCount", count);
+    document.getElementById("reviewCount").textContent = count;
+
+    // --- Parse query params and display summary ---
+    const params = new URLSearchParams(window.location.search);
+
+    const productRaw = params.get("productName") || "";
+    const rating     = params.get("rating")       || "";
+    const date       = params.get("installDate")  || "";
+    const features   = params.getAll("features");
+    const review     = params.get("writtenReview")|| "";
+    const name       = params.get("userName")     || "Anonymous";
+
+    // Find product name from products array (loaded from form.js)
+    const productObj  = products.find(p => p.id === productRaw);
+    const productName = productObj ? productObj.name : productRaw || "—";
+
+    // Build star string
+    const starFilled = "&#9733;";
+    const starEmpty  = "&#9734;";
+    const starsHTML  = rating
+      ? starFilled.repeat(Number(rating)) + starEmpty.repeat(5 - Number(rating))
+      : "—";
+
+    // Format date nicely
+    const dateDisplay = date
+      ? new Date(date + "T00:00:00").toLocaleDateString("en-US", { year:"numeric", month:"long", day:"numeric" })
+      : "—";
+
+    const summaryList = document.getElementById("summaryList");
+
+    const rows = [
+      { label: "Product",        value: productName },
+      { label: "Rating",         value: `<span class="stars-inline">${starsHTML}</span>`, isHTML: true },
+      { label: "Install Date",   value: dateDisplay },
+      { label: "Features",       value: features.length ? features.join(", ") : "None selected" },
+      { label: "Review",         value: review || "No written review provided" },
+      { label: "Reviewer",       value: name },
+    ];
+
+    rows.forEach(row => {
+      const dt = document.createElement("dt");
+      dt.textContent = row.label;
+      const dd = document.createElement("dd");
+      if (row.isHTML) {
+        dd.innerHTML = row.value;
+      } else {
+        dd.textContent = row.value;
+      }
+      summaryList.appendChild(dt);
+      summaryList.appendChild(dd);
+    });
+  </script>
+</body>
+</html>
