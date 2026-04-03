@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EduNexus - A curated hub for online education, student tools, and software development resources." />
+  <title>EduNexus — Site Plan</title>
+  <link rel="stylesheet" href="styles/siteplan.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="sp-header">
+    <div class="sp-header__logo">
+      <span class="logo-mark">EN</span>
+      <span class="logo-text">EduNexus</span>
+    </div>
+    <p class="sp-header__label">W05 · Site Plan Document</p>
+  </header>
+
+  <main class="sp-main">
+
+    <!-- 01 SITE NAME -->
+    <section class="sp-section" id="site-name">
+      <div class="sp-section__tag">01</div>
+      <h2 class="sp-section__title">Site Name</h2>
+      <div class="sp-card">
+        <div class="name-hero">
+          <span class="name-logo-big">EN</span>
+          <div>
+            <h1 class="site-name-display">EduNexus</h1>
+            <p class="site-name-domain">edunexus.io <span class="badge">suggested domain</span></p>
+          </div>
+        </div>
+        <p class="sp-desc">
+          <strong>EduNexus</strong> combines <em>"Edu"</em> (Education) and <em>"Nexus"</em> (a connection point or hub).
+          The name communicates exactly what the site does: it serves as a central connection point for
+          online learners — linking institutions, tools, and resources in one organized space.
+          It is modern, easy to remember, and immediately signals an educational purpose.
+        </p>
+      </div>
+    </section>
+
+    <!-- 02 SITE PURPOSE -->
+    <section class="sp-section" id="site-purpose">
+      <div class="sp-section__tag">02</div>
+      <h2 class="sp-section__title">Site Purpose</h2>
+      <div class="sp-card">
+        <p class="sp-desc">
+          EduNexus is a personal dashboard for online students, providing a curated directory of
+          educational institutions (with direct links to student portals), essential digital tools
+          for productivity and study, curated learning resources such as books and references,
+          and a dedicated section on software development — including a spotlight on
+          <strong>BYU-Pathway Worldwide</strong> and its Software Development programme.
+          The site also uses JavaScript to offer basic content translation, making it accessible
+          to non-English speakers. The layout follows a <em>Dashboard with Sidebar + Main Content</em>
+          structure for fast, intuitive navigation.
+        </p>
+      </div>
+    </section>
+
+    <!-- 03 SCENARIOS -->
+    <section class="sp-section" id="scenarios">
+      <div class="sp-section__tag">03</div>
+      <h2 class="sp-section__title">Scenarios</h2>
+      <div class="sp-scenarios">
+        <div class="scenario-card">
+          <span class="scenario-icon">🎓</span>
+          <p>"I'm an online student looking for all my school portals and study tools in one place — where can I find them quickly without searching Google every time?"</p>
+        </div>
+        <div class="scenario-card">
+          <span class="scenario-icon">💻</span>
+          <p>"I want to study Software Development but I'm not sure which programme to choose. Is there an affordable and recognised option that I can complete while working?"</p>
+        </div>
+        <div class="scenario-card">
+          <span class="scenario-icon">📚</span>
+          <p>"Where can I find free or low-cost books and resources to improve my programming skills alongside my formal studies?"</p>
+        </div>
+        <div class="scenario-card">
+          <span class="scenario-icon">🌐</span>
+          <p>"I speak Portuguese and English. Can I switch the site language so some content is easier to read in my native language?"</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 COLOR SCHEMA -->
+    <section class="sp-section" id="colors">
+      <div class="sp-section__tag">04</div>
+      <h2 class="sp-section__title">Color Schema</h2>
+      <div class="sp-colors">
+
+        <div class="color-swatch" style="background:#0D1B2A; color:#D8E4F0;">
+          <div class="swatch-info">
+            <span class="swatch-hex">#0D1B2A</span>
+            <span class="swatch-name">Deep Navy</span>
+          </div>
+          <p class="swatch-use">Page background, primary dark surface</p>
+        </div>
+
+        <div class="color-swatch" style="background:#112236; color:#D8E4F0;">
+          <div class="swatch-info">
+            <span class="swatch-hex">#112236</span>
+            <span class="swatch-name">Surface Navy</span>
+          </div>
+          <p class="swatch-use">Cards, panels, header background</p>
+        </div>
+
+        <div class="color-swatch" style="background:#4A90D9; color:#ffffff;">
+          <div class="swatch-info">
+            <span class="swatch-hex">#4A90D9</span>
+            <span class="swatch-name">Steel Blue</span>
+          </div>
+          <p class="swatch-use">Primary accent — links, highlights, logo, section tags, CTA buttons</p>
+        </div>
+
+        <div class="color-swatch" style="background:#FFFFFF; color:#0D1B2A;">
+          <div class="swatch-info" style="color:#0D1B2A;">
+            <span class="swatch-hex">#FFFFFF</span>
+            <span class="swatch-name">White</span>
+          </div>
+          <p class="swatch-use" style="color:#0D1B2A;">Headings, logo text, strong emphasis</p>
+        </div>
+
+        <div class="color-swatch" style="background:#D8E4F0; color:#0D1B2A;">
+          <div class="swatch-info" style="color:#0D1B2A;">
+            <span class="swatch-hex">#D8E4F0</span>
+            <span class="swatch-name">Ice Blue</span>
+          </div>
+          <p class="swatch-use" style="color:#0D1B2A;">Body text on dark backgrounds</p>
+        </div>
+
+        <div class="color-swatch" style="background:#7A95AE; color:#0D1B2A;">
+          <div class="swatch-info" style="color:#0D1B2A;">
+            <span class="swatch-hex">#7A95AE</span>
+            <span class="swatch-name">Slate</span>
+          </div>
+          <p class="swatch-use" style="color:#0D1B2A;">Secondary text, labels, inactive items, descriptions</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 05 TYPOGRAPHY -->
+    <section class="sp-section" id="typography">
+      <div class="sp-section__tag">05</div>
+      <h2 class="sp-section__title">Typography</h2>
+      <div class="sp-typo">
+        <div class="typo-card">
+          <p class="typo-label">Display / Headings</p>
+          <p class="typo-sample syne">Syne</p>
+          <p class="typo-detail">Used for page titles, section headings (h1–h3), logo text, and navigation labels. Bold geometric personality that conveys confidence and modernity.</p>
+        </div>
+        <div class="typo-card">
+          <p class="typo-label">Body / Reading</p>
+          <p class="typo-sample instrument">Instrument Serif</p>
+          <p class="typo-detail">Used for descriptive paragraphs, resource descriptions, and article-style content. A refined serif that brings warmth and readability to longer passages.</p>
+        </div>
+        <div class="typo-card">
+          <p class="typo-label">Code / Mono / Labels</p>
+          <p class="typo-sample mono">DM Mono</p>
+          <p class="typo-detail">Used for code snippets, domain names, technical labels, version numbers, and badges. Crisp and clean monospace for technical credibility.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 WIREFRAMES -->
+    <section class="sp-section" id="wireframes">
+      <div class="sp-section__tag">06</div>
+      <h2 class="sp-section__title">Wireframes</h2>
+      <div class="sp-wireframes">
+
+        <!-- MOBILE WIREFRAME -->
+        <div class="wf-block">
+          <h3 class="wf-title">📱 Mobile View</h3>
+          <div class="wf-frame mobile-wf">
+            <svg viewBox="0 0 200 400" xmlns="http://www.w3.org/2000/svg" class="wf-svg">
+              <!-- Phone shell -->
+              <rect x="4" y="4" width="192" height="392" rx="18" fill="#112236" stroke="#4A90D9" stroke-width="1.2"/>
+              <!-- Top bar -->
+              <rect x="4" y="4" width="192" height="40" rx="18" fill="#0D1B2A"/>
+              <rect x="4" y="28" width="192" height="16" fill="#0D1B2A"/>
+              <text x="18" y="29" font-size="8.5" fill="#4A90D9" font-family="monospace" font-weight="600">EduNexus</text>
+
+              <!-- Nav tabs -->
+              <rect x="12" y="52" width="50" height="14" rx="7" fill="#4A90D9"/>
+              <text x="22" y="62" font-size="6" fill="#ffffff" font-family="monospace">Home</text>
+              <rect x="68" y="52" width="50" height="14" rx="7" fill="#162B42" stroke="#7A95AE" stroke-width="0.5"/>
+              <text x="76" y="62" font-size="6" fill="#7A95AE" font-family="monospace">Tools</text>
+              <rect x="124" y="52" width="64" height="14" rx="7" fill="#162B42" stroke="#7A95AE" stroke-width="0.5"/>
+              <text x="130" y="62" font-size="6" fill="#7A95AE" font-family="monospace">Resources</text>
+
+              <!-- Hero card -->
+              <rect x="12" y="74" width="176" height="66" rx="7" fill="#0D1B2A" stroke="#4A90D9" stroke-width="0.6"/>
+              <rect x="20" y="83" width="75" height="5" rx="2.5" fill="#D8E4F0" opacity="0.9"/>
+              <rect x="20" y="93" width="130" height="3.5" rx="1.5" fill="#7A95AE" opacity="0.6"/>
+              <rect x="20" y="100" width="110" height="3.5" rx="1.5" fill="#7A95AE" opacity="0.6"/>
+              <rect x="20" y="116" width="58" height="13" rx="6.5" fill="#4A90D9"/>
+              <text x="28" y="125" font-size="5.5" fill="#ffffff" font-family="monospace">Explore →</text>
+
+              <!-- Institutions label -->
+              <text x="12" y="156" font-size="6.5" fill="#7A95AE" font-family="monospace">INSTITUTIONS</text>
+
+              <!-- Cards -->
+              <rect x="12" y="162" width="84" height="52" rx="6" fill="#162B42"/>
+              <rect x="20" y="171" width="28" height="4" rx="2" fill="#4A90D9" opacity="0.85"/>
+              <rect x="20" y="179" width="66" height="3" rx="1.5" fill="#7A95AE" opacity="0.5"/>
+              <rect x="20" y="185" width="55" height="3" rx="1.5" fill="#7A95AE" opacity="0.5"/>
+              <rect x="20" y="196" width="38" height="10" rx="5" fill="#0D1B2A" stroke="#4A90D9" stroke-width="0.5"/>
+              <text x="24" y="203" font-size="5" fill="#4A90D9" font-family="monospace">Portal →</text>
+
+              <rect x="104" y="162" width="84" height="52" rx="6" fill="#162B42"/>
+              <rect x="112" y="171" width="28" height="4" rx="2" fill="#7A95AE" opacity="0.85"/>
+              <rect x="112" y="179" width="66" height="3" rx="1.5" fill="#7A95AE" opacity="0.5"/>
+              <rect x="112" y="185" width="55" height="3" rx="1.5" fill="#7A95AE" opacity="0.5"/>
+              <rect x="112" y="196" width="38" height="10" rx="5" fill="#0D1B2A" stroke="#7A95AE" stroke-width="0.5"/>
+              <text x="116" y="203" font-size="5" fill="#7A95AE" font-family="monospace">Visit →</text>
+
+              <!-- Tools section -->
+              <text x="12" y="228" font-size="6.5" fill="#7A95AE" font-family="monospace">STUDENT TOOLS</text>
+              <rect x="12" y="233" width="176" height="28" rx="6" fill="#162B42"/>
+              <circle cx="27" cy="247" r="7" fill="#0D1B2A" stroke="#4A90D9" stroke-width="0.5"/>
+              <rect x="40" y="241" width="75" height="4" rx="2" fill="#D8E4F0" opacity="0.75"/>
+              <rect x="40" y="249" width="55" height="3" rx="1.5" fill="#7A95AE" opacity="0.5"/>
+
+              <!-- SW Dev spotlight -->
+              <rect x="12" y="272" width="176" height="58" rx="7" fill="#0D1B2A" stroke="#4A90D9" stroke-width="0.8"/>
+              <text x="20" y="288" font-size="6.5" fill="#4A90D9" font-family="monospace">SOFTWARE DEV</text>
+              <rect x="20" y="293" width="145" height="3" rx="1.5" fill="#7A95AE" opacity="0.6"/>
+              <rect x="20" y="299" width="130" height="3" rx="1.5" fill="#7A95AE" opacity="0.6"/>
+              <rect x="20" y="305" width="120" height="3" rx="1.5" fill="#7A95AE" opacity="0.6"/>
+              <rect x="20" y="314" width="75" height="11" rx="5.5" fill="#4A90D9"/>
+              <text x="26" y="322" font-size="5.5" fill="#ffffff" font-family="monospace">Explore BYU →</text>
+
+              <!-- Footer strip -->
+              <rect x="4" y="356" width="192" height="40" rx="0" fill="#0D1B2A"/>
+              <rect x="4" y="374" width="192" height="22" rx="18" fill="#0D1B2A"/>
+              <rect x="70" y="368" width="60" height="4" rx="2" fill="#7A95AE" opacity="0.3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- DESKTOP WIREFRAME -->
+        <div class="wf-block">
+          <h3 class="wf-title">🖥️ Desktop View</h3>
+          <div class="wf-frame desktop-wf">
+            <svg viewBox="0 0 520 340" xmlns="http://www.w3.org/2000/svg" class="wf-svg">
+              <rect width="520" height="340" rx="10" fill="#0D1B2A"/>
+              <!-- Sidebar -->
+              <rect x="0" y="0" width="115" height="340" rx="10" fill="#112236"/>
+              <rect x="100" y="0" width="15" height="340" fill="#112236"/>
+              <!-- Logo -->
+              <rect x="14" y="15" width="22" height="22" rx="5" fill="#4A90D9"/>
+              <text x="19" y="30" font-size="8.5" font-weight="bold" fill="#ffffff" font-family="monospace">EN</text>
+              <text x="42" y="30" font-size="8" fill="#D8E4F0" font-family="monospace">EduNexus</text>
+              <!-- Nav -->
+              <rect x="10" y="50" width="95" height="19" rx="6" fill="#4A90D9"/>
+              <text x="20" y="63" font-size="7" fill="#ffffff" font-family="monospace">⌂  Dashboard</text>
+              <rect x="10" y="75" width="95" height="19" rx="5" fill="transparent"/>
+              <text x="20" y="88" font-size="7" fill="#7A95AE" font-family="monospace">⊞  Institutions</text>
+              <rect x="10" y="100" width="95" height="19" rx="5" fill="transparent"/>
+              <text x="20" y="113" font-size="7" fill="#7A95AE" font-family="monospace">🛠  Tools</text>
+              <rect x="10" y="125" width="95" height="19" rx="5" fill="transparent"/>
+              <text x="20" y="138" font-size="7" fill="#7A95AE" font-family="monospace">📚  Resources</text>
+              <rect x="10" y="150" width="95" height="19" rx="5" fill="transparent"/>
+              <text x="20" y="163" font-size="7" fill="#7A95AE" font-family="monospace">💻  Software Dev</text>
+              <line x1="14" y1="182" x2="100" y2="182" stroke="#0D1B2A" stroke-width="1"/>
+              <rect x="10" y="188" width="95" height="19" rx="5" fill="transparent"/>
+              <text x="20" y="201" font-size="7" fill="#7A95AE" font-family="monospace">🌐  Language</text>
+              <!-- User -->
+              <rect x="10" y="298" width="95" height="28" rx="6" fill="#0D1B2A"/>
+              <circle cx="24" cy="312" r="8" fill="#4A90D9" opacity="0.25"/>
+              <text x="35" y="310" font-size="6" fill="#D8E4F0" font-family="monospace">Student</text>
+              <text x="35" y="319" font-size="5.5" fill="#7A95AE" font-family="monospace">BYU-Pathway</text>
+
+              <!-- Topbar -->
+              <rect x="115" y="0" width="405" height="36" fill="#0D1B2A"/>
+              <rect x="125" y="9" width="155" height="17" rx="8.5" fill="#112236"/>
+              <text x="138" y="21" font-size="7" fill="#7A95AE" font-family="monospace">🔍 Search...</text>
+              <rect x="432" y="9" width="78" height="17" rx="8.5" fill="#112236"/>
+              <text x="445" y="21" font-size="7" fill="#7A95AE" font-family="monospace">EN | PT</text>
+
+              <!-- Hero banner -->
+              <rect x="115" y="36" width="405" height="78" fill="#112236"/>
+              <text x="128" y="60" font-size="11" font-weight="bold" fill="#D8E4F0" font-family="monospace">Welcome back, Student 👋</text>
+              <text x="128" y="74" font-size="7" fill="#7A95AE" font-family="monospace">Your learning hub — institutions, tools, and resources in one place.</text>
+              <rect x="128" y="83" width="72" height="17" rx="8.5" fill="#4A90D9"/>
+              <text x="137" y="94" font-size="6.5" fill="#ffffff" font-family="monospace">Explore Now →</text>
+
+              <!-- Institutions label -->
+              <text x="128" y="130" font-size="7" fill="#7A95AE" font-family="monospace">INSTITUTIONS</text>
+
+              <!-- Card 1 -->
+              <rect x="128" y="136" width="114" height="66" rx="7" fill="#112236"/>
+              <rect x="136" y="146" width="38" height="4.5" rx="2" fill="#4A90D9" opacity="0.9"/>
+              <text x="136" y="152" font-size="6" fill="#4A90D9" font-family="monospace">BYU-Pathway</text>
+              <rect x="136" y="156" width="96" height="3" rx="1.5" fill="#7A95AE" opacity="0.5"/>
+              <rect x="136" y="161" width="82" height="3" rx="1.5" fill="#7A95AE" opacity="0.5"/>
+              <rect x="136" y="166" width="88" height="3" rx="1.5" fill="#7A95AE" opacity="0.5"/>
+              <rect x="136" y="176" width="54" height="13" rx="6.5" fill="#4A90D9"/>
+              <text x="142" y="185" font-size="5.5" fill="#ffffff" font-family="monospace">Student Portal →</text>
+
+              <!-- Card 2 -->
+              <rect x="250" y="136" width="114" height="66" rx="7" fill="#112236"/>
+              <rect x="258" y="146" width="30" height="4.5" rx="2" fill="#7A95AE" opacity="0.9"/>
+              <text x="258" y="152" font-size="6" fill="#7A95AE" font-family="monospace">Coursera</text>
+              <rect x="258" y="156" width="96" height="3" rx="1.5" fill="#7A95AE" opacity="0.5"/>
+              <rect x="258" y="161" width="82" height="3" rx="1.5" fill="#7A95AE" opacity="0.5"/>
+              <rect x="258" y="166" width="88" height="3" rx="1.5" fill="#7A95AE" opacity="0.5"/>
+              <rect x="258" y="176" width="54" height="13" rx="6.5" fill="#162B42" stroke="#7A95AE" stroke-width="0.5"/>
+              <text x="264" y="185" font-size="5.5" fill="#7A95AE" font-family="monospace">Visit Site →</text>
+
+              <!-- Card 3 -->
+              <rect x="372" y="136" width="114" height="66" rx="7" fill="#112236"/>
+              <rect x="380" y="146" width="46" height="4.5" rx="2" fill="#7A95AE" opacity="0.9"/>
+              <text x="380" y="152" font-size="6" fill="#7A95AE" font-family="monospace">Khan Academy</text>
+              <rect x="380" y="156" width="96" height="3" rx="1.5" fill="#7A95AE" opacity="0.5"/>
+              <rect x="380" y="161" width="82" height="3" rx="1.5" fill="#7A95AE" opacity="0.5"/>
+              <rect x="380" y="166" width="88" height="3" rx="1.5" fill="#7A95AE" opacity="0.5"/>
+              <rect x="380" y="176" width="54" height="13" rx="6.5" fill="#162B42" stroke="#7A95AE" stroke-width="0.5"/>
+              <text x="386" y="185" font-size="5.5" fill="#7A95AE" font-family="monospace">Visit Site →</text>
+
+              <!-- SW Dev spotlight -->
+              <rect x="128" y="213" width="238" height="114" rx="7" fill="#0D1B2A" stroke="#4A90D9" stroke-width="0.8"/>
+              <text x="138" y="230" font-size="7.5" fill="#4A90D9" font-family="monospace">💻 SOFTWARE DEVELOPMENT</text>
+              <rect x="138" y="236" width="198" height="3" rx="1.5" fill="#7A95AE" opacity="0.5"/>
+              <rect x="138" y="243" width="182" height="3" rx="1.5" fill="#7A95AE" opacity="0.5"/>
+              <rect x="138" y="250" width="192" height="3" rx="1.5" fill="#7A95AE" opacity="0.5"/>
+              <text x="138" y="270" font-size="7" fill="#D8E4F0" font-family="monospace">★ Did you know?</text>
+              <rect x="138" y="274" width="198" height="3" rx="1.5" fill="#7A95AE" opacity="0.45"/>
+              <rect x="138" y="280" width="182" height="3" rx="1.5" fill="#7A95AE" opacity="0.45"/>
+              <rect x="138" y="286" width="190" height="3" rx="1.5" fill="#7A95AE" opacity="0.45"/>
+              <rect x="138" y="297" width="88" height="16" rx="8" fill="#4A90D9"/>
+              <text x="145" y="308" font-size="6" fill="#ffffff" font-family="monospace">Explore BYU-SD →</text>
+
+              <!-- Tools panel -->
+              <rect x="374" y="213" width="112" height="114" rx="7" fill="#112236"/>
+              <text x="384" y="229" font-size="7" fill="#7A95AE" font-family="monospace">TOOLS</text>
+              <rect x="382" y="234" width="94" height="16" rx="5" fill="#0D1B2A"/>
+              <text x="390" y="245" font-size="6" fill="#D8E4F0" font-family="monospace">📅 Google Cal</text>
+              <rect x="382" y="254" width="94" height="16" rx="5" fill="#0D1B2A"/>
+              <text x="390" y="265" font-size="6" fill="#D8E4F0" font-family="monospace">📝 Notion</text>
+              <rect x="382" y="274" width="94" height="16" rx="5" fill="#0D1B2A"/>
+              <text x="390" y="285" font-size="6" fill="#D8E4F0" font-family="monospace">🔗 GitHub</text>
+              <rect x="382" y="294" width="94" height="16" rx="5" fill="#0D1B2A"/>
+              <text x="390" y="305" font-size="6" fill="#D8E4F0" font-family="monospace">📖 DeepL</text>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="sp-footer">
+    <p>EduNexus · W05 Site Plan · WDD131 · <span id="year"></span></p>
+  </footer>
+
+  <script src="scripts/siteplan.js"></script>
+</body>
+</html>
