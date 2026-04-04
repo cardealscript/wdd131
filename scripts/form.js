@@ -27,17 +27,28 @@ const products = [
   }
 ];
 
-// Dynamically populate the Product Name <select> element
+// Dynamically populate the Product Name <select>
 function populateProducts() {
   const select = document.getElementById("productName");
-  if (!select) return; // Only runs on form.html
+  if (!select) return;
 
   products.forEach(product => {
     const option = document.createElement("option");
-    option.value       = product.id;   // value = product id (as required)
-    option.textContent = product.name; // display text = product name
+    option.value = product.id;         // value = product id
+    option.textContent = product.name; // display = product name
     select.appendChild(option);
   });
 }
 
-document.addEventListener("DOMContentLoaded", populateProducts);
+// Set footer year and last modified
+function setFooter() {
+  const yearEl = document.getElementById("currentYear");
+  const modEl  = document.getElementById("lastMod");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  if (modEl)  modEl.textContent  = document.lastModified;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  populateProducts();
+  setFooter();
+});

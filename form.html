@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Submit a product review for our tech products. Share your experience, rate the product, and help others make informed decisions." />
+  <meta name="description" content="Submit a product review for our tech products. Share your experience, rate the product, and help others make informed decisions.">
+  <meta name="author" content="Cardeal Felisberto">
   <title>Product Review | WDD131</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/form.css">
 </head>
 <body>
@@ -34,7 +35,7 @@
       <h2>Submit Your Review</h2>
       <p class="form-intro">Fields marked with <span class="req-mark" aria-hidden="true">*</span> <span class="sr-only">an asterisk</span> are required.</p>
 
-      <form method="get" action="review.html" id="reviewForm" novalidate>
+      <form method="get" action="review.html" id="reviewForm">
 
         <!-- 1. Product Name -->
         <div class="field-group">
@@ -49,7 +50,7 @@
           </div>
         </div>
 
-        <!-- 2. Overall Rating -->
+        <!-- 2. Overall Rating - ALL radios have required -->
         <div class="field-group">
           <fieldset>
             <legend>
@@ -58,19 +59,19 @@
             <p class="field-hint">Select a star rating from 1 (lowest) to 5 (highest)</p>
             <div class="stars-wrap" role="group" aria-label="Star rating">
               <input type="radio" id="star5" name="rating" value="5" required aria-required="true">
-              <label for="star5" title="5 stars - Excellent">&#9733;<span class="sr-only">5 stars</span></label>
+              <label for="star5" title="5 stars – Excellent">&#9733;<span class="sr-only">5 stars</span></label>
 
-              <input type="radio" id="star4" name="rating" value="4">
-              <label for="star4" title="4 stars - Good">&#9733;<span class="sr-only">4 stars</span></label>
+              <input type="radio" id="star4" name="rating" value="4" required>
+              <label for="star4" title="4 stars – Good">&#9733;<span class="sr-only">4 stars</span></label>
 
-              <input type="radio" id="star3" name="rating" value="3">
-              <label for="star3" title="3 stars - Average">&#9733;<span class="sr-only">3 stars</span></label>
+              <input type="radio" id="star3" name="rating" value="3" required>
+              <label for="star3" title="3 stars – Average">&#9733;<span class="sr-only">3 stars</span></label>
 
-              <input type="radio" id="star2" name="rating" value="2">
-              <label for="star2" title="2 stars - Poor">&#9733;<span class="sr-only">2 stars</span></label>
+              <input type="radio" id="star2" name="rating" value="2" required>
+              <label for="star2" title="2 stars – Poor">&#9733;<span class="sr-only">2 stars</span></label>
 
-              <input type="radio" id="star1" name="rating" value="1">
-              <label for="star1" title="1 star - Terrible">&#9733;<span class="sr-only">1 star</span></label>
+              <input type="radio" id="star1" name="rating" value="1" required>
+              <label for="star1" title="1 star – Terrible">&#9733;<span class="sr-only">1 star</span></label>
             </div>
           </fieldset>
         </div>
@@ -91,27 +92,27 @@
           <p class="field-hint" id="installDate-hint">When did you install or receive this product?</p>
         </div>
 
-        <!-- 4. Useful Features -->
+        <!-- 4. Useful Features - label for= explicitly set -->
         <div class="field-group">
           <fieldset>
             <legend>Useful Features <span class="optional-tag">(Check all that apply)</span></legend>
             <div class="checkbox-grid">
-              <label class="check-item">
+              <label class="check-item" for="durability">
                 <input type="checkbox" id="durability" name="features" value="Durability">
                 <span class="check-box" aria-hidden="true"></span>
                 Durability
               </label>
-              <label class="check-item">
+              <label class="check-item" for="easeOfUse">
                 <input type="checkbox" id="easeOfUse" name="features" value="Ease of Use">
                 <span class="check-box" aria-hidden="true"></span>
                 Ease of Use
               </label>
-              <label class="check-item">
+              <label class="check-item" for="performance">
                 <input type="checkbox" id="performance" name="features" value="Performance">
                 <span class="check-box" aria-hidden="true"></span>
                 Performance
               </label>
-              <label class="check-item">
+              <label class="check-item" for="design">
                 <input type="checkbox" id="design" name="features" value="Design">
                 <span class="check-box" aria-hidden="true"></span>
                 Design
@@ -144,7 +145,7 @@
             type="text"
             id="userName"
             name="userName"
-            placeholder="e.g. Zacarias Conwana"
+            placeholder="e.g. Jefta Tarcia"
             autocomplete="name"
           />
         </div>
@@ -166,10 +167,7 @@
     </p>
   </footer>
 
-  <script src="scripts/form.js"></script>
-  <script>
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-    document.getElementById("lastMod").textContent = document.lastModified;
-  </script>
+  <!-- Single external JS file with defer -->
+  <script src="scripts/form.js" defer></script>
 </body>
 </html>
