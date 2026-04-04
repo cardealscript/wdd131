@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
 </head>
 <body>
 
@@ -40,25 +41,25 @@
         <!-- 1. Product Name -->
         <div class="field-group">
           <label for="productName">
-            Product Name <span class="req-mark" aria-label="required">*</span>
+            Product Name <span class="req-mark" aria-hidden="true">*</span>
           </label>
           <div class="select-wrap">
-            <select id="productName" name="productName" required aria-required="true">
+            <select id="productName" name="productName" required>
               <option value="" disabled selected>Select a Product ...</option>
             </select>
             <span class="select-icon" aria-hidden="true">&#9660;</span>
           </div>
         </div>
 
-        <!-- 2. Overall Rating - ALL radios have required -->
+        <!-- 2. Overall Rating -->
         <div class="field-group">
           <fieldset>
             <legend>
-              Overall Rating <span class="req-mark" aria-label="required">*</span>
+              Overall Rating <span class="req-mark" aria-hidden="true">*</span>
             </legend>
             <p class="field-hint">Select a star rating from 1 (lowest) to 5 (highest)</p>
             <div class="stars-wrap" role="group" aria-label="Star rating">
-              <input type="radio" id="star5" name="rating" value="5" required aria-required="true">
+              <input type="radio" id="star5" name="rating" value="5" required>
               <label for="star5" title="5 stars – Excellent">&#9733;<span class="sr-only">5 stars</span></label>
 
               <input type="radio" id="star4" name="rating" value="4" required>
@@ -79,20 +80,19 @@
         <!-- 3. Date of Installation -->
         <div class="field-group">
           <label for="installDate">
-            Date of Installation <span class="req-mark" aria-label="required">*</span>
+            Date of Installation <span class="req-mark" aria-hidden="true">*</span>
           </label>
           <input
             type="date"
             id="installDate"
             name="installDate"
             required
-            aria-required="true"
             aria-describedby="installDate-hint"
-          />
+          >
           <p class="field-hint" id="installDate-hint">When did you install or receive this product?</p>
         </div>
 
-        <!-- 4. Useful Features - label for= explicitly set -->
+        <!-- 4. Useful Features -->
         <div class="field-group">
           <fieldset>
             <legend>Useful Features <span class="optional-tag">(Check all that apply)</span></legend>
@@ -145,9 +145,9 @@
             type="text"
             id="userName"
             name="userName"
-            placeholder="e.g. Jefta Tarcia"
+            placeholder="e.g. Jefta Conwana"
             autocomplete="name"
-          />
+          >
         </div>
 
         <!-- Submit -->
@@ -167,7 +167,5 @@
     </p>
   </footer>
 
-  <!-- Single external JS file with defer -->
-  <script src="scripts/form.js" defer></script>
 </body>
 </html>
