@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ── SEO ── -->
+  <meta name="description" content="Essential digital tools for online students — Microsoft 365, Notion, GitHub, Google Drive, DeepL, Zoom and more. Free and paid resources for productivity and study.">
+  <meta name="author" content="Cardeal Felisberto">
+  <meta name="keywords" content="student tools, Microsoft 365, Notion, GitHub, Google Drive, DeepL, Zoom, productivity tools, study resources, online learning tools">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="EduNexus — Tools &amp; Resources for Online Students">
+  <meta property="og:description" content="Curated digital tools to help you study, write, collaborate, and stay organised as an online student.">
+  <meta property="og:type" content="website">
+
+  <title>EduNexus — Tools &amp; Resources | Student Productivity</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Nunito+Sans:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="layout">
+
+  <aside class="sidebar" aria-label="Main navigation">
+    <a href="index.html" class="sidebar__brand" aria-label="EduNexus home">
+      <img class="brand-logo" src="images/en-logo.svg" alt="EduNexus logo" width="36" height="36">
+      <span class="brand-name">EduNexus</span>
+    </a>
+    <nav class="sidebar__nav" aria-label="Site pages">
+      <p class="nav-label">Menu</p>
+      <a href="index.html" class="nav-item"><span class="nav-icon" aria-hidden="true">⌂</span> Dashboard</a>
+      <a href="institutions.html" class="nav-item"><span class="nav-icon" aria-hidden="true">🏫</span> Institutions</a>
+      <a href="tools.html" class="nav-item" aria-current="page">
+        <span class="nav-icon" aria-hidden="true">🛠</span> Tools &amp; Resources
+        <span class="nav-badge" id="suggestion-count" aria-label="suggestions saved"></span>
+      </a>
+      <a href="software.html" class="nav-item"><span class="nav-icon" aria-hidden="true">💻</span> Software Dev</a>
+      <p class="nav-label">Student</p>
+      <a href="https://www.byupathway.org/" class="nav-item" target="_blank" rel="noopener noreferrer"><span class="nav-icon" aria-hidden="true">🎓</span> BYU Portal</a>
+      <a href="https://canvas.byui.edu/" class="nav-item" target="_blank" rel="noopener noreferrer"><span class="nav-icon" aria-hidden="true">📋</span> Canvas LMS</a>
+    </nav>
+  </aside>
+
+  <header class="topbar">
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <div class="topbar__search" role="search">
+      <span aria-hidden="true">🔍</span>
+      <input type="search" placeholder="Search tools..." aria-label="Search tools">
+    </div>
+    <div class="topbar__right">
+      <a class="portal-btn" href="https://www.byupathway.org/" target="_blank" rel="noopener noreferrer">🎓 Student Portal</a>
+    </div>
+  </header>
+
+  <main class="main-content" id="main">
+
+    <div class="page-header">
+      <p class="page-header__tag">Productivity</p>
+      <h1>Tools &amp; Resources</h1>
+      <p>Curated digital tools to help you study, write, collaborate, and stay organised as an online student.</p>
+    </div>
+
+    <!-- Microsoft 365 Spotlight -->
+    <section class="spotlight" aria-labelledby="ms365-title">
+      <div class="spotlight__body">
+        <p class="spotlight__badge">🖊 Writing &amp; Productivity Suite</p>
+        <h2 id="ms365-title">Microsoft 365</h2>
+        <p>Access Word, Excel, PowerPoint, OneNote, Teams, and OneDrive from any device. Students often qualify for free or discounted access — check if BYU-Idaho provides it through your programme.</p>
+        <div class="spotlight__actions">
+          <a href="https://www.microsoft365.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Open Microsoft 365 →</a>
+          <a href="https://www.microsoft.com/en-us/education/products/office" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Student Pricing</a>
+        </div>
+      </div>
+      <div class="spotlight__image">
+        <img
+          src="images/tools-banner.jpg"
+          alt="Digital tools and workspace setup for online students"
+          width="320" height="260"
+          loading="lazy"
+        >
+      </div>
+    </section>
+
+    <!-- All Tools (rendered by JS) -->
+    <h2 class="section-title">All Tools</h2>
+    <div class="tools-list" id="tools-list" aria-label="Student tools list" aria-live="polite"></div>
+
+    <!-- Suggestion Form -->
+    <section class="form-section" aria-labelledby="suggest-heading">
+      <h2 id="suggest-heading" data-i18n="suggestTitle">Suggest a Resource</h2>
+      <p data-i18n="suggestDesc">Know a great educational resource we are missing? Let us know!</p>
+
+      <form id="suggestion-form" novalidate aria-label="Resource suggestion form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="suggest-name">Your Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="suggest-name" name="name" placeholder="e.g. Cardeal Felisberto" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="suggest-email">Your Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="suggest-email" name="email" placeholder="e.g. you@example.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="suggest-type">Resource Type</label>
+            <select id="suggest-type" name="type">
+              <option value="institution">Educational Institution</option>
+              <option value="tool">Productivity Tool</option>
+              <option value="book">Book / Reference</option>
+              <option value="course">Free Course</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="suggest-url">Resource URL <span aria-hidden="true">*</span></label>
+            <input type="url" id="suggest-url" name="url" placeholder="https://" required>
+          </div>
+          <div class="form-group full">
+            <label for="suggest-note">Why should we add it?</label>
+            <textarea id="suggest-note" name="note" placeholder="Tell us why this resource is valuable for online students..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Suggestion →</button>
+        <div class="form-msg" role="alert" aria-live="polite"></div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> EduNexus · Maputo, Mozambique · Built by Cardeal Felisberto · WDD131</p>
+    <p>Last updated: <span id="last-edit"></span> · <a href="references.html">References</a> · <a href="siteplan.html">Site Plan</a></p>
+  </footer>
+
+</div>
+
+<div id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+<script src="scripts/main.js"></script>
+</body>
+</html>

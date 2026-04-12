@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ── SEO ── -->
+  <meta name="description" content="Browse accredited online educational institutions — BYU-Pathway, Coursera, edX, Khan Academy, MIT OpenCourseWare and more. Find the right programme for you.">
+  <meta name="author" content="Cardeal Felisberto">
+  <meta name="keywords" content="online universities, BYU-Pathway, Coursera, edX, Khan Academy, MIT, distance learning, accredited degrees, online courses, Mozambique students">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="EduNexus — Educational Institutions Directory">
+  <meta property="og:description" content="Accredited online universities, MOOCs, and free learning platforms with direct enrolment links.">
+  <meta property="og:type" content="website">
+
+  <title>EduNexus — Institutions | Online Education Directory</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Nunito+Sans:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="layout">
+
+  <aside class="sidebar" aria-label="Main navigation">
+    <a href="index.html" class="sidebar__brand" aria-label="EduNexus home">
+      <img class="brand-logo" src="images/en-logo.svg" alt="EduNexus logo" width="36" height="36">
+      <span class="brand-name">EduNexus</span>
+    </a>
+    <nav class="sidebar__nav" aria-label="Site pages">
+      <p class="nav-label">Menu</p>
+      <a href="index.html" class="nav-item"><span class="nav-icon" aria-hidden="true">⌂</span> Dashboard</a>
+      <a href="institutions.html" class="nav-item" aria-current="page"><span class="nav-icon" aria-hidden="true">🏫</span> Institutions</a>
+      <a href="tools.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">🛠</span> Tools &amp; Resources
+        <span class="nav-badge" id="suggestion-count" aria-label="suggestions saved"></span>
+      </a>
+      <a href="software.html" class="nav-item"><span class="nav-icon" aria-hidden="true">💻</span> Software Dev</a>
+      <p class="nav-label">Student</p>
+      <a href="https://www.byupathway.org/" class="nav-item" target="_blank" rel="noopener noreferrer"><span class="nav-icon" aria-hidden="true">🎓</span> BYU Portal</a>
+      <a href="https://canvas.byui.edu/" class="nav-item" target="_blank" rel="noopener noreferrer"><span class="nav-icon" aria-hidden="true">📋</span> Canvas LMS</a>
+    </nav>
+  </aside>
+
+  <header class="topbar">
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <div class="topbar__search" role="search">
+      <span aria-hidden="true">🔍</span>
+      <input type="search" placeholder="Search institutions..." aria-label="Search institutions">
+    </div>
+    <div class="topbar__right">
+      <a class="portal-btn" href="https://www.byupathway.org/" target="_blank" rel="noopener noreferrer">🎓 Student Portal</a>
+    </div>
+  </header>
+
+  <main class="main-content" id="main">
+
+    <div class="page-header">
+      <p class="page-header__tag">Directory</p>
+      <h1>Educational Institutions</h1>
+      <p>Accredited online universities, MOOCs, and free learning platforms — with direct links to enrolment and student portals.</p>
+    </div>
+
+    <div class="filter-bar" role="group" aria-label="Filter institutions by category">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="University">University</button>
+      <button class="filter-btn" data-filter="MOOC">MOOC</button>
+      <button class="filter-btn" data-filter="Free Learning">Free Learning</button>
+      <button class="filter-btn" data-filter="Skills">Skills</button>
+    </div>
+
+    <!-- Cards rendered by JS -->
+    <div class="cards-grid" id="institutions-grid" aria-label="Institutions list" aria-live="polite"></div>
+
+    <!-- BYU Spotlight -->
+    <section class="spotlight" aria-labelledby="byu-spotlight">
+      <div class="spotlight__body">
+        <p class="spotlight__badge">⭐ Recommended for Mozambique Students</p>
+        <h2 id="byu-spotlight">BYU-Pathway Worldwide</h2>
+        <p>BYU-Pathway offers an affordable pathway to a recognised university degree — entirely online. PathwayConnect costs as little as $67/month and is available in Maputo and across Africa.</p>
+        <div class="spotlight__actions">
+          <a href="https://www.byupathway.org/pathwayconnect" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Start PathwayConnect →</a>
+          <a href="https://www.byupathway.org/degrees" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Browse Degrees</a>
+        </div>
+      </div>
+      <div class="spotlight__image">
+        <img
+          src="images/byu-campus.jpg"
+          alt="BYU-Idaho campus with mountains in the background"
+          width="320" height="260"
+          loading="lazy"
+        >
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> EduNexus · Maputo, Mozambique · Built by Cardeal Felisberto · WDD131</p>
+    <p>Last updated: <span id="last-edit"></span> · <a href="references.html">References</a> · <a href="siteplan.html">Site Plan</a></p>
+  </footer>
+
+</div>
+
+<div id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+<script src="scripts/main.js"></script>
+</body>
+</html>

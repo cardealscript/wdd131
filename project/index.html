@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ── SEO ── -->
+  <meta name="description" content="EduNexus — Your personal dashboard for online education. Discover accredited institutions, student tools, and developer resources. Built in Maputo, Mozambique.">
+  <meta name="author" content="Cardeal Felisberto">
+  <meta name="keywords" content="online education, student portal, BYU-Pathway, learning tools, Mozambique, e-learning, university, distance learning, educational resources, programming, software development.">
+  <meta name="robots" content="index, follow">
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:title" content="EduNexus — Online Education Hub">
+  <meta property="og:description" content="A curated dashboard for online students — institutions, tools, and resources in one place.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero-banner.jpg">
+
+  <title>EduNexus — Online Education Hub | Home</title>
+
+  <!-- ── Fonts (single load — not duplicated in CSS) ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Nunito+Sans:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="layout">
+
+  <!-- ════════════════════════ SIDEBAR ════════════════════════ -->
+  <aside class="sidebar" aria-label="Main navigation">
+    <a href="index.html" class="sidebar__brand" aria-label="EduNexus home">
+      <img class="brand-logo" src="images/en-logo.svg" alt="EduNexus logo" width="36" height="36">
+      <span class="brand-name">EduNexus</span>
+    </a>
+
+    <nav class="sidebar__nav" aria-label="Site pages">
+      <p class="nav-label">Menu</p>
+      <a href="index.html" class="nav-item" aria-current="page"><span class="nav-icon" aria-hidden="true">⌂</span> Dashboard</a>
+      <a href="institutions.html" class="nav-item"><span class="nav-icon" aria-hidden="true">🏫</span> Institutions</a>
+      <a href="tools.html" class="nav-item">
+        <span class="nav-icon" aria-hidden="true">🛠</span> Tools &amp; Resources
+        <span class="nav-badge" id="suggestion-count" aria-label="suggestions saved"></span>
+      </a>
+      <a href="software.html" class="nav-item"><span class="nav-icon" aria-hidden="true">💻</span> Software Dev</a>
+      <p class="nav-label">Student</p>
+      <a href="https://www.byupathway.org/" class="nav-item" target="_blank" rel="noopener noreferrer"><span class="nav-icon" aria-hidden="true">🎓</span> BYU Portal</a>
+      <a href="https://canvas.byui.edu/" class="nav-item" target="_blank" rel="noopener noreferrer"><span class="nav-icon" aria-hidden="true">📋</span> Canvas LMS</a>
+    </nav>
+  </aside>
+
+  <!-- ════════════════════════ TOPBAR ════════════════════════ -->
+  <header class="topbar">
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <div class="topbar__search" role="search">
+      <span aria-hidden="true">🔍</span>
+      <input type="search" placeholder="Search institutions..." aria-label="Search institutions">
+    </div>
+    <div class="topbar__right">
+      <a class="portal-btn" href="https://www.byupathway.org/" target="_blank" rel="noopener noreferrer">🎓 Student Portal</a>
+    </div>
+  </header>
+
+  <!-- ════════════════════════ MAIN ════════════════════════ -->
+  <main class="main-content" id="main">
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <p class="hero__tag">Your Learning Hub</p>
+        <h1 id="hero-title">Welcome to EduNexus</h1>
+        <p>A curated dashboard for online students — institutions, tools, and resources in one place.</p>
+        <div class="hero__actions">
+          <a href="institutions.html" class="btn btn-primary">Explore Institutions</a>
+          <a href="https://www.byupathway.org/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">My Student Portal</a>
+        </div>
+      </div>
+      <div class="hero__image">
+        <img
+          src="images/hero-banner.jpg"
+          alt="Student studying online with laptop in a modern workspace"
+          width="480" height="320"
+          loading="eager"
+        >
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <div class="stats-row" aria-label="Site statistics">
+      <div class="stat-card">
+        <p class="stat-card__number">6+</p>
+        <p class="stat-card__label">Institutions</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-card__number">10+</p>
+        <p class="stat-card__label">Tools</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-card__number">8</p>
+        <p class="stat-card__label">Free Resources</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-card__number">180+</p>
+        <p class="stat-card__label">Countries Served</p>
+      </div>
+    </div>
+
+    <!-- Featured Institutions (rendered by JS) -->
+    <h2 class="section-title">Featured Institutions</h2>
+    <div class="cards-grid" id="institutions-grid" aria-label="Institutions list"></div>
+
+    <!-- BYU Spotlight -->
+    <section class="spotlight" aria-labelledby="spotlight-title">
+      <div class="spotlight__body">
+        <p class="spotlight__badge">⭐ Featured Programme</p>
+        <h2 id="spotlight-title">BYU-Pathway Worldwide</h2>
+        <p>An affordable, online, globally accessible university experience. Start with PathwayConnect — available to anyone in Maputo, Mozambique and worldwide.</p>
+        <div class="spotlight__actions">
+          <a href="https://www.byupathway.org/pathwayconnect" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Enroll in PathwayConnect →</a>
+          <a href="software.html" class="btn btn-outline">View Software Dev Track</a>
+        </div>
+      </div>
+      <div class="spotlight__image">
+        <img
+          src="images/byu-campus.jpg"
+          alt="BYU-Idaho campus aerial view"
+          width="320" height="260"
+          loading="lazy"
+        >
+      </div>
+    </section>
+
+    <!-- Essential Tools preview -->
+    <h2 class="section-title">Essential Tools</h2>
+    <div class="cards-grid" aria-label="Featured student tools">
+      <div class="card">
+        <img class="card__img" src="images/microsoft365-logo.jpg" alt="Microsoft 365 logo" width="200" height="120" loading="lazy" onerror="this.style.display='none'">
+        <span class="card__badge free">Productivity</span>
+        <h3>Microsoft 365</h3>
+        <p>Word, Excel, PowerPoint, Teams — the complete suite for students.</p>
+        <div class="card__footer">
+          <a class="card__link" href="https://www.microsoft365.com" target="_blank" rel="noopener noreferrer">Open →</a>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card__img" src="images/notion-logo.jpg" alt="Notion logo" width="200" height="120" loading="lazy" onerror="this.style.display='none'">
+        <span class="card__badge free">Workspace</span>
+        <h3>Notion</h3>
+        <p>Notes, tasks, wikis and databases — all in one place.</p>
+        <div class="card__footer">
+          <a class="card__link" href="https://www.notion.so" target="_blank" rel="noopener noreferrer">Open →</a>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card__img" src="images/deepl-logo.jpg" alt="DeepL Translator logo" width="200" height="120" loading="lazy" onerror="this.style.display='none'">
+        <span class="card__badge free">Translation</span>
+        <h3>DeepL</h3>
+        <p>High-quality EN ↔ PT translation for your studies.</p>
+        <div class="card__footer">
+          <a class="card__link" href="https://www.deepl.com" target="_blank" rel="noopener noreferrer">Open →</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ════════════════════════ FOOTER ════════════════════════ -->
+  <footer class="footer">
+    <p>© <span id="year"></span> EduNexus · Maputo, Mozambique · Built by Cardeal Felisberto · WDD131</p>
+    <p>Last updated: <span id="last-edit"></span> · <a href="references.html">References</a> · <a href="siteplan.html">Site Plan</a></p>
+  </footer>
+
+</div>
+
+<div id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+<script src="scripts/main.js"></script>
+</body>
+</html>
